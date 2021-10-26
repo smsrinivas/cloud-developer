@@ -2,7 +2,7 @@
   "name": "udacity-c2-image-filter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf www/ || true",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grutt/udacity-c2-image-filter.git"
+    "url": "git@github.com:smsrinivas/cloud-developer.git"
   },
-  "author": "",
+  "author": "Srinivas Sandur Madhu Murthy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/grutt/udacity-c2-image-filter/issues"
@@ -29,8 +29,13 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "image-url-validator": "^1.0.4",
     "jimp": "^0.16.1",
+    "lodash": "^4.17.15",
     "rimraf": "^3.0.2",
-    "lodash": "^4.17.15"
+    "url-exists-deep": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
