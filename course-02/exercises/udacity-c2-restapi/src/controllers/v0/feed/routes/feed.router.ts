@@ -16,35 +16,15 @@ router.get('/', async (req: Request, res: Response) => {
     res.send(items);
 });
 
-//An endpoint to GET a specific resource by Primary Key
+//@TODO
+//Add an endpoint to GET a specific resource by Primary Key
+
 // update a specific resource
 router.patch('/:id', 
     requireAuth, 
     async (req: Request, res: Response) => {
-    
-        // destruct our path params
-    let { id } = req.params;
-
-    // check to make sure the id is set
-    if (!id) { 
-      // respond with an error if not
-      return res.status(400).send(`id is required`);
-    }
-
-    const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
-
-    const rows = items.rows;
-
-    // try to find the item by id
-    const item = rows.filter((item) => item.id == Number(id));
-
-    // respond not found, if we do not have this id
-    if(item && item.length === 0) {
-      return res.status(404).send(`car is not found`);
-    }
-
-    //return the item with a success status code
-    res.status(200).send(item);
+        //@TODO try it yourself
+        res.send(500).send("not implemented")
 });
 
 
